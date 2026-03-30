@@ -61,7 +61,6 @@ int main() {
     int unique_indices[30]; // support up to 30
     int count = 0;
     srand((unsigned int)time(NULL));
-printf("test");
     // Generate num_words unique random indices
     while (count < num_words) {
         int idx = rand() % word_bank_size;
