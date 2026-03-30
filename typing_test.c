@@ -14,50 +14,19 @@ void clearScreen() {
 }
 
 int main() {
-    // Large, diverse, non-repetitive English word bank
+    // Simple, common English words for typing practice
     char *word_bank[] = {
-        "apple", "banana", "car", "dog", "elephant", "forest", "guitar", "house", "island", "jungle",
-        "kangaroo", "lemon", "mountain", "notebook", "orange", "pencil", "queen", "river", "sun", "tree",
-        "umbrella", "violin", "window", "xylophone", "yacht", "zebra", "adventure", "breeze", "candle", "dolphin",
-        "engine", "feather", "garden", "horizon", "iceberg", "jacket", "kitten", "lantern", "mirror", "nebula",
-        "ocean", "parrot", "quartz", "rainbow", "saddle", "tiger", "unicorn", "valley", "whale", "yogurt",
-        "zephyr", "anchor", "blossom", "crystal", "drizzle", "ember", "fossil", "galaxy", "harbor", "ink",
-        "jewel", "kettle", "lizard", "meadow", "nectar", "opal", "petal", "quiver", "ripple", "sphinx",
-        "thunder", "utopia", "velvet", "willow", "yawn", "zenith", "asteroid", "bison", "coral", "daisy",
-        "falcon", "glacier", "hazel", "iris", "koala", "lily", "mango", "nectarine", "onyx", "pebble",
-        "quokka", "reef", "sage", "topaz", "urchin", "violet", "wren", "yeti", "azure", "bamboo",
-        "cascade", "dew", "elm", "fern", "grove", "heather", "ivy", "jade", "kelp", "lichen",
-        "moss", "nutmeg", "owl", "pine", "quince", "reed", "spruce", "thistle", "umbra", "vine",
-        "walnut", "yucca", "zinnia", "acorn", "clover", "dune", "echo", "fjord", "gale", "harp",
-        "juniper", "koi", "lotus", "maple", "oak", "petunia", "rose", "tulip", "urn", "yarrow",
-        "zen", "ant", "bee", "cat", "duck", "eel", "fox", "goat", "hen", "ibis",
-        "jay", "kite", "lion", "mole", "newt", "pig", "quail", "rat", "slug", "toad",
-        "vole", "wolf", "yak", "arch", "bridge", "cave", "dock", "escarpment", "gorge", "hill",
-        "isle", "jetty", "knoll", "ledge", "mesa", "nook", "outcrop", "peak", "quarry", "ridge",
-        "slope", "tor", "upland", "vale", "warren", "yard", "ziggurat", "cloud", "river", "stone",
-        "field", "star", "planet", "comet", "orbit", "rocket", "space", "dream", "story", "music",
-        "dance", "light", "shadow", "echo", "voice", "song", "poem", "book", "page", "pen",
-        "ink", "paper", "note", "line", "verse", "rhyme", "tale", "game", "play", "move",
-        "jump", "run", "walk", "climb", "slide", "spin", "roll", "laugh", "smile", "cry",
-        "shout", "whisper", "talk", "speak", "listen", "hear", "see", "look", "watch", "glance",
-        "gaze", "peek", "peer", "stare", "view", "scan", "survey", "build", "make", "create",
-        "form", "shape", "mold", "craft", "design", "draw", "paint", "cook", "bake", "boil",
-        "fry", "roast", "grill", "steam", "stew", "blend", "mix", "plant", "grow", "water",
-        "harvest", "pick", "dig", "sow", "prune", "trim", "weed", "drive", "ride", "sail",
-        "fly", "row", "paddle", "steer", "guide", "lead", "follow", "search", "find", "seek",
-        "explore", "discover", "learn", "study", "read", "write", "count", "add", "subtract", "multiply",
-        "divide", "measure", "weigh", "compare", "estimate", "calculate", "solve", "think", "know", "guess",
-        "wonder", "imagine", "dream", "plan", "decide", "choose", "prefer", "begin", "start", "continue",
-        "finish", "end", "stop", "pause", "wait", "rest", "sleep", "wake", "rise", "stand",
-        "sit", "lie", "bend", "stretch", "reach", "touch", "hold", "carry", "bring", "take",
-        "fetch", "send", "deliver", "return", "leave", "stay", "remain", "open", "close", "shut",
-        "lock", "unlock", "enter", "exit", "arrive", "depart", "visit", "meet", "greet", "welcome",
-        "invite", "join", "gather", "collect", "assemble", "group", "team", "help", "assist", "support",
-        "aid", "care", "protect", "defend", "guard", "save", "rescue", "love", "like", "enjoy",
-        "admire", "respect", "trust", "value", "cherish", "appreciate", "hope", "wish", "desire", "want",
-        "need", "require", "demand", "expect", "ask", "request", "thank", "praise", "congratulate", "applaud",
-        "cheer", "encourage", "motivate", "inspire", "teach", "train", "practice", "review", "test", "quiz",
-        "examine", "check", "mark", "grade"
+        "the", "and", "have", "that", "for", "you", "with", "say", "this", "they",
+        "but", "his", "from", "not", "she", "what", "their", "can", "who", "get",
+        "would", "her", "make", "about", "know", "will", "one", "time", "there", "year",
+        "think", "when", "which", "them", "some", "people", "take", "out", "into", "just",
+        "see", "him", "your", "come", "could", "now", "than", "like", "other", "how",
+        "then", "its", "our", "two", "more", "these", "want", "way", "look", "first",
+        "also", "new", "because", "day", "use", "no", "man", "find", "here", "thing",
+        "give", "many", "well", "only", "those", "tell", "very", "even", "back", "any",
+        "good", "woman", "through", "us", "life", "child", "work", "down", "may", "after",
+        "should", "call", "world", "over", "school", "still", "try", "in", "as", "on",
+        "is", "it", "at", "by", "an", "be", "if", "or", "do", "so"
     };
     int word_bank_size = sizeof(word_bank) / sizeof(word_bank[0]);
     char random_sentence[2000] = "";
@@ -88,7 +57,23 @@ int main() {
     // clearScreen(); // Removed to keep the sentence visible
     printf("===== Typing Speed Test =====\n\n");
     printf("Type the following sentence as fast as you can:\n\n");
-    printf("%s\n\n", random_sentence);
+    // Print the sentence, wrapping only between words (not in the middle of a word)
+    int line_len = 0;
+    int max_line = 60; // characters per line before wrapping
+    for (int i = 0; i < num_words; i++) {
+        int word_len = strlen(word_bank[unique_indices[i]]);
+        if (line_len + word_len > max_line) {
+            printf("\n");
+            line_len = 0;
+        }
+        printf("%s", word_bank[unique_indices[i]]);
+        line_len += word_len;
+        if (i < num_words - 1) {
+            printf(" ");
+            line_len++;
+        }
+    }
+    printf("\n\n");
     printf("Press ENTER when ready...");
     getchar();
 
