@@ -17,7 +17,7 @@ A simple C program to test your typing speed and accuracy. The program generates
 ```
 c:/MinGW/bin/gcc.exe typing_test.c -o typing_test.exe
 ```
-
+c:/MinGW/bin/gcc.exe 20wordtest.c -o 20wordtest.exe
 3. Run the program:
 
 ```
